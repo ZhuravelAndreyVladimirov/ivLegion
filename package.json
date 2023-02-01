@@ -1,8 +1,8 @@
 {
-    "name": "gulp-site",
+    "name": "IV-Imperial-Legion-site",
     "version": "1.0.0",
     "description": "new gulp website",
-    "author": "Coder Folder",
+    "author": "Milan-and",
     "devDependencies": {
         "browser-sync": "^2.27.10",
         "del": "^6.0.0",
