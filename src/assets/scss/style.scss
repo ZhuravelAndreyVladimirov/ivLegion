@@ -6,8 +6,13 @@
     box-sizing: border-box;
 }
 
+@import './fonts';
+@import './var';
+@import './mixin';
+
 body {
-    
+    background-color: black;
+    @include Commissioner-Regular;
 }
 
 .container {
@@ -15,3 +20,9 @@ body {
     margin: 0 auto;
     padding: 0 15px;
 }
+
+@import './components/header';
+
+@import './components/fotter';
+
+

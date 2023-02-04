@@ -1,0 +1,54 @@
+@mixin Commissioner-Regular {
+    font-family: "Commissioner-Regular", 'sans-serif';
+    font-weight: 400;
+}
+
+@mixin Commissioner-semibold {
+    font-family: "Commissioner-semibold", 'sans-serif';
+    font-weight: 600;
+}
+
+@mixin Commissioner-bold {
+    font-family: "Commissioner-bold", 'sans-serif';
+    font-weight: 700;
+}
+
+
+@mixin list-reset {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+@mixin btn-reset {
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+@mixin link-reset {
+    color: inherit;
+    text-decoration: none;
+}
+
+@mixin link-hover($text-color) {
+    color: lighten($text-color, 10%);
+}
+
+@mixin link-focus($otline-color) {
+    outline: 1px $otline-color solid;
+    outline-offset: 7px;
+    border-radius: 10px;
+}
+
+@mixin link-active($text-color){
+    outline: none;
+    color: darken($text-color, 10%);
+}
+
+@mixin pseudo-elem {
+    content: '';
+    position: absolute;
+    
+}

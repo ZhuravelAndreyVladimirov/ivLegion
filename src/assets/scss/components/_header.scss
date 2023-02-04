@@ -1,0 +1,159 @@
+@import '../var';
+@import '../mixin';
+
+
+.header {
+    &-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $primary;
+        padding: 20px;
+        border-radius: 0 0 10px 10px;
+    }
+
+    &__logo-link {
+        @include link-reset;
+        display: inline-block;
+    }
+
+    &__logo-link:focus-visible {
+        outline: 1px $but_here_the_yellow_is_not_quite_yellow solid;
+        outline-offset: 10px;
+        border-radius: 10px;
+    }
+
+    &__logo-guild {
+        color: $but_here_the_yellow_is_not_quite_yellow;
+        @include Commissioner-bold;
+        font-size: 40px;
+        line-height: 100%;
+    }
+
+    &__nav {}
+
+    &__nav-list {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        gap: $indent;
+        @include list-reset;
+    }
+
+    &__nav-item {
+        position: relative;
+    }
+
+    &__nav-item::after {
+        @include pseudo-elem;
+        left: 10px;
+        height: 2px;
+        background-color: $but_here_the_yellow_is_not_quite_yellow__light;
+    }
+
+    &__nav-item:hover::after {
+        opacity: 1;
+        animation: .4s pseudo forwards;
+    }
+
+    &__nav-link {
+        display: inline-block;
+        padding: 10px;
+        @include link-reset;
+        @include Commissioner-semibold;
+        font-size: 25px;
+        line-height: 100%;
+        color: $but_here_the_yellow_is_not_quite_yellow;
+        transition: color .4s;
+    }
+
+    &__nav-link:hover {
+        @include link-hover($but_here_the_yellow_is_not_quite_yellow);
+    }
+
+    &__nav-link:focus-visible {
+        @include link-focus($but_here_the_yellow_is_not_quite_yellow)
+    }
+
+    &__nav-link:active {
+        @include link-active($but_here_the_yellow_is_not_quite_yellow);
+    }
+
+    &__burger {
+        display: none;
+    }
+
+    &__dropdown {
+        position: relative;
+    }
+
+    &__dropdown-wrap {
+        position: absolute;
+        top: 40px;
+        display: none;
+        padding: 15px;
+        width: 250px;
+        background-color: $modal;
+        border-radius: 10px;
+    }
+
+    &__dropdown:hover &__dropdown-wrap {
+        display: block;
+    }
+
+    &__dropdown-list {
+        @include list-reset;
+    }
+
+    &__dropdown-item:not(:last-child) {
+        margin-bottom: $indent-min;
+    }
+
+  
+
+    &__dropdown-link {
+        position: relative;
+        @include link-reset;
+        @include Commissioner-semibold;
+        display: inline-block;
+        padding: 10px;
+        font-size: 20px;
+        line-height: 100%;
+        color: $but_here_the_yellow_is_not_quite_yellow;
+        transition: color .4s, opacity .3s;
+    }
+
+    &__dropdown-link::after {
+        @include pseudo-elem;
+        bottom: 5px;
+        left: 10px;
+        height: 2px;
+        background-color: $but_here_the_yellow_is_not_quite_yellow__light;
+    }
+
+    &__dropdown-link:hover {
+        @include link-hover($but_here_the_yellow_is_not_quite_yellow);
+    }
+
+    &__dropdown-link:hover::after {
+        animation: .4s pseudo forwards;
+    }
+
+    &__dropdown-link:focus-visible {
+        @include link-focus($but_here_the_yellow_is_not_quite_yellow)
+    }
+
+    &__dropdown-link:active {
+        @include link-active($but_here_the_yellow_is_not_quite_yellow);
+    }
+}
+
+@keyframes pseudo {
+    from {
+        right: 100%;
+    }
+
+    to {
+        right: 10px;
+    }
+}
