@@ -42,6 +42,16 @@ body {
     padding: 0 15px;
 }
 
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.footer {
+    margin-top: auto;
+}
+
 .header-wrapper {
     display: flex;
     justify-content: space-between;
@@ -208,4 +218,14 @@ body {
     to {
         right: 10px;
     }
+}
+
+.footer__wrap {
+    background-color: #3b1b1a;
+}
+
+.footer__social-link {
+    display: block;
+    width: 30px;
+    height: 30px;
 }
